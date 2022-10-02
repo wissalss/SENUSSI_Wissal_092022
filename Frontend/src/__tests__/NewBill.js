@@ -6,9 +6,11 @@ import "@testing-library/jest-dom"
 import { fireEvent, screen } from "@testing-library/dom"
 import NewBillUI from "../views/NewBillUI.js"
 import NewBill from "../containers/NewBill.js"
+import BillsUI from "../views/BillsUI.js";
 import { localStorageMock } from "../__mocks__/localStorage.js";
-import { ROUTES } from '../constants/routes'
+import { ROUTES, ROUTES_PATH } from '../constants/routes'
 import mockStore from "../__mocks__/store.js"
+import router from "../app/Router.js";
 
 window.alert = jest.fn()
 jest.mock("../app/Store", () => mockStore)
