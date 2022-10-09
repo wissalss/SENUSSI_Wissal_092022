@@ -70,7 +70,6 @@ describe("When I am on Bills Page and i click on the eye icon", () => {
 
 describe("When i click Nouvelle note de frais", () => {
     test("new bill appears", () => {
-
         const onNavigate = (pathname) => {
             document.body.innerHTML = ROUTES({ pathname })
         }
@@ -86,7 +85,6 @@ describe("When i click Nouvelle note de frais", () => {
         const btnNewBill = screen.getByTestId("btn-new-bill")
         btnNewBill.addEventListener("click", OpenNewBill)
         fireEvent.click(btnNewBill)
-
         expect(OpenNewBill).toHaveBeenCalled()
         expect(screen.getByText("Envoyer une note de frais")).toBeTruthy()
     })

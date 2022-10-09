@@ -28,7 +28,7 @@ export default class NewBill {
             const email = JSON.parse(localStorage.getItem("user")).email
             formData.append('file', file)
             formData.append('email', email)
-
+            document.getElementById("message").hidden = true
             this.store
                 .bills()
                 .create({
